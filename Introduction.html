@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Website</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+</head>
+<body>
+
+<!-- Titre en haut de la page -->
+<header class="page-title">
+    <h1>SAE1-03 Installation d'un poste pour le dévelopement</h1>
+</header>
+
+<!-- Navigation -->
+<ul class="nav">
+    <li class="nav-item">
+        <a class="nav-link" href="index.html" data-tooltip="Retour à la page d'accueil">Accueil</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" href="Introduction.html" data-tooltip="Introduction du sujet en repondant aux question sur les VM">Introduction</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="installation.html" data-tooltip="Explication du processus d'installation de la VM">Installation</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="organisation.html" data-tooltip="Présentation du planning de la SAE">Organisation</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="serveur_web.html" data-tooltip="Présentation des démarches pour la mise en place du serveur web">Serveur Web</a>
+    </li>
+</ul>
+
+<!-- Section des questions et réponses -->
+<div class="container">
+    <div class="box">
+        <h2>Définition de la virtualisation</h2>
+        <p>La virtualisation consiste, en informatique, à exécuter sur une machine hôte, dans un environnement isolé, des systèmes d'exploitation on parle alors de virtualisation système ou des applications
+            on parle alors de virtualisation applicative. Ces ordinateurs virtuels
+            sont appelés serveur privé virtuel (Virtual Private Server ou VPS) ou encore environnement virtuel (Virtual Environment ou VE).</p>
+    </div>
+    <div class="box">
+        <h2>Différence entre émulateur, simulateur et outil de virtualisation</h2>
+
+        <div class="question-answer">
+            <h3>Émulateur</h3>
+            <h4>Définition :</h4>
+                <p>Un émulateur est un logiciel ou un système qui reproduit fidèlement le fonctionnement d'un matériel ou d'un système dans un environnement différent.</p>
+            <h4>Exemples :</h4>
+            <ul>
+                <li>Émulateur Android (comme BlueStacks) pour exécuter des applications Android sur un PC.</li>
+                <li>Émulateurs de consoles de jeux (comme PCSX2 pour la PlayStation 2).</li>
+            </ul>
+            <h4>Caractéristiques :</h4>
+            <ul>
+                <li>Imite à la fois le matériel et le logiciel.</li>
+                <li>Moins performant que le matériel réel (car il reproduit chaque instruction à bas niveau).</li>
+                <li>Utilisé pour tester des applications sur différentes plateformes matérielles.</li>
+            </ul>
+        </div>
+
+        <div class="question-answer">
+            <h3>Simulateur</h3>
+            <h4>Définition :</h4>
+                <p>Un simulateur est un logiciel qui recrée un environnement ou un comportement spécifique sans imiter le matériel sous-jacent.</p>
+            <h4>Exemples :</h4>
+            <ul>
+                <li>Simulateurs iOS (fournis par Xcode) pour tester des applications iPhone sur macOS.</li>
+                <li>Simulateurs de vol pour l'entraînement des pilotes.</li>
+            </ul>
+            <h4>Caractéristiques :</h4>
+            <ul>
+                <li>Simule uniquement le comportement logiciel (sans imiter le matériel).</li>
+                <li>Plus rapide qu'un émulateur, mais moins précis.</li>
+                <li>Utilisé principalement pour les tests d'applications.</li>
+            </ul>
+        </div>
+
+        <div class="question-answer">
+            <h3>Outil de virtualisation</h3>
+            <h4>Définition :</h4>
+                <p>Un outil de virtualisation crée un environnement virtuel pour exécuter plusieurs systèmes d'exploitation ou applications sur une seule machine physique.</p>
+            <h4>Exemples :</h4>
+            <ul>
+                <li>VirtualBox, VMware, ou Hyper-V pour exécuter des machines virtuelles (VM).</li>
+                <li>Docker pour virtualiser des applications via des conteneurs.</li>
+            </ul>
+            <h4>Caractéristiques :</h4>
+            <ul>
+                <li>Ne cherche pas à reproduire un système différent, mais à isoler plusieurs systèmes ou applications sur une même machine.</li>
+                <li>Permet l’exécution parallèle de systèmes d’exploitation (ex. : Linux et Windows sur un même PC).</li>
+                <li>Utilisé pour le développement, les tests, et la production dans des environnements partagés.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="box">
+        <h2>Type de virtualisation pour les environnements VirtualBox, VmWare Workstation et Stratus</h2>
+        <div class="question-answer">
+            <p> Les hyperviseurs de type 1 (natifs) accèdent directement au matériel et ne nécessitent pas la prise en charge d'un système d'exploitation
+                sous-jacent. Ils agissent comme le système d'exploitation et contrôlent les appels de ressources.</p>
+            <p>Les hyperviseurs de type 2 s'exécutent sur un système d'exploitation traditionnel en tant qu'application. Ils fournissent des capacités de virtualisation en coordonnant les
+                appels de ressources via le système d'exploitation hôte.
+                Voici comment les deux solutions de virtualisation sont classées :</p>
+            <ul>
+                <li>VMware ESXi est un hyperviseur de type 1 qui doit être installé sur bare metal.</li>
+                <li> VMware Player, Workstation et Fusion sont des hyperviseurs de type 2 qui doivent être installés sur un périphérique physique avec un système d'exploitation hôte.</li>
+                <li>VirtualBox est également un hyperviseur de type 2 qui doit être installé sur un système d'exploitation hôte.</li>
+            </ul>
+        </div>
+        </div>
+    <div class="box">
+        <h2>Forme/lieu de sauvegarde de la machine virtuelle créée</h2>
+        <div class="question-answer">
+            <p>Si vous créez un snapshot de mémoire, vous capturez également l'état de la mémoire de la machine virtuelle. Ces états sont sauvegardés dans des fichiers situés au même emplacement
+                que les fichiers de base de la machine virtuelle. OVA est un format de fichier qui combine les images de disque de la machine virtuelle, la configuration matérielle virtuelle et les métadonnées dans un seul fichier d'archive.
+                L'ordinateur virtuel stocké s'affiche dans le volet Objets de bibliothèque physique.</p>
+        </div>
+    </div>
+    <div class="box">
+        <h2>Explication de tous les choix techniques possibles </h2>
+        <div class="question-answer">
+            <p>On va voir les différentes configurations que nous avons fait pour notre machine virtuelle et expliquer ces différents choix.</p>
+            <section class="image-section">
+                <div>
+                    <img src="assets/images/config2.jpg" alt="image montrant notre configuration" class="img-fluid">
+                </div>
+                <ul>
+                    <li>Systèmes : Nous avons choisi pour la configuration du systèmes 4096 Mo de mémoire vive et 4 cœurs aux processeurs car ces capacités allouées feront complètement l’affaire pour les tâches que nous allons effectuer.  </li>
+                    <li> General : le système choisi est Debian car il fait partie de la suite Linux et que c’est un système assez facile d’usage et de compréhension pour un premier usage.</li>
+                    <li>Stockage : Nous avons choisi 20 Go de stockage alloués qui était la mesure de base proposes par VirtualBox et qui sera +parfaitement suffisant pour nous et notre utilisation de notre machine.</li>
+                </ul>
+            </section>
+
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>Anthony DE OLIVEIRA - Celthans DEZAN - Raphael ORTIGUES © 2024</p>
+</footer>
+
+</body>
+</html>
