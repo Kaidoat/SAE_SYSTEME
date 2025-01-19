@@ -1,4 +1,3 @@
-/* Style global */
 html, body {
     margin: 0;
     padding: 0;
@@ -8,66 +7,57 @@ html, body {
     flex-direction: column;
 }
 
-/* Titre en haut de la page */
+body {
+    flex: 1;
+}
+
 .page-title {
     text-align: center;
-    background-color: #ecf0f1; /* Fond clair */
-    color: #3498db; /* Bleu */
+    background-color: #ecf0f1;
+    color: #3498db;
     padding: 20px 0;
     font-size: 2rem;
     font-weight: bold;
 }
 
-/* Wrapper pour le contenu principal */
-body {
-    flex: 1;
-}
-
-/* Style de la barre de navigation */
 .nav {
     display: flex;
     justify-content: center;
-    background-color: #3e5d7a; /* Couleur sombre élégante */
+    background-color: #3e5d7a;
     padding: 15px 30px;
-    border-radius: 10px; /* Coins arrondis */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Ombre subtile */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     margin: 20px;
 }
 
-/* Style des éléments de la barre de navigation */
 .nav-item {
     list-style: none;
 }
 
-/* Style des liens */
 .nav-link {
-    margin-left: 30px;
-    margin-right: 30px;
+    margin: 0 30px;
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: bold;
     padding: 10px 20px;
     border-radius: 5px;
     color: #ecf0f1;
-    position: relative; /* Nécessaire pour positionner le tooltip */
+    position: relative;
     transition: all 0.3s ease;
 }
 
-/* Lien actif */
 .nav-link.active {
     background-color: #3498db;
     color: #3e5d7a;
     transform: scale(1.1);
 }
 
-/* Effet de survol des liens */
 .nav-link:hover {
-    background-color: #2980b9; /* Bleue plus foncée */
+    background-color: #2980b9;
     color: white;
-    transform: scale(1.05); /* Petit effet de zoom */
+    transform: scale(1.05);
 }
 
-/* Style des tooltips */
 .nav-link[data-tooltip]:hover::after {
     content: attr(data-tooltip);
     position: absolute;
@@ -88,10 +78,9 @@ body {
 }
 
 .nav-link[data-tooltip]:hover::after {
-    opacity: 1; /* Affichage du tooltip */
+    opacity: 1;
 }
 
-/* Container principal */
 .container {
     display: flex;
     flex-direction: column;
@@ -100,7 +89,6 @@ body {
     padding-bottom: 50px;
 }
 
-/* Boîte des sections (équipe, mission...) */
 .box {
     background-color: white;
     color: #34495e;
@@ -111,7 +99,7 @@ body {
 }
 
 .box:hover {
-    transform: scale(1.02); /* Effet de survol léger */
+    transform: scale(1.02);
 }
 
 .box h2 {
@@ -131,12 +119,11 @@ body {
     margin-top: 10px;
 }
 
-/* Zone des images */
 .image-section {
     display: flex;
     justify-content: center;
     gap: 50px;
-    flex-wrap: wrap; /* Pour un design responsive */
+    flex-wrap: wrap;
     margin-top: 30px;
 }
 
@@ -149,6 +136,7 @@ body {
     width: 250px;
     transition: transform 0.3s ease;
 }
+
 .image-box2 {
     text-align: center;
     background-color: #f7f9fa;
@@ -171,7 +159,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* Footer */
 .footer {
     background-color: #34495e;
     color: #ecf0f1;
@@ -187,12 +174,12 @@ body {
     margin: 0;
 }
 
-/* Styles responsives */
 @media (max-width: 768px) {
     .nav {
         flex-direction: column;
         margin: 40px;
     }
+
     .nav-link {
         margin-top: 10px;
     }
@@ -210,12 +197,12 @@ body {
     .container {
         margin: 20px 10px;
     }
-    .nav-link[data-tooltip]:hover::after{
+
+    .nav-link[data-tooltip]:hover::after {
         display: none;
     }
 }
 
-/* Style pour les sections de questions et réponses */
 .question-answer {
     background-color: #f7f9fa;
     padding: 10px;
