@@ -3,98 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Example Website</title>
+    <title>SAE 1-03 Installation d'un poste pour le développement</title>
     <link rel="stylesheet" href="assets/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
           rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
           crossorigin="anonymous">
 </head>
 <body>
-<header class="page-title">
-    <h1>SAE 1-03 Installation d'un poste pour le dévelopement</h1>
+<header>
+    <h1 class="page-title">SAE 1-03 Installation d'un poste pour le développement</h1>
 </header>
-<ul class="nav">
-    <li class="nav-item">
-        <a class="nav-link" href="index.html" data-tooltip="Retour à la page d'accueil">Accueil</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="Introduction.html" data-tooltip="Introduction du sujet en repondant aux question sur les VM">Introduction</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link active" href="installation.html" data-tooltip="Explication du processus d'installation de la VM">Installation</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="organisation.html" data-tooltip="Presentation du planning de la SAE">Organisation</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="serveur_web.html" data-tooltip="Presentation des demarches pour la mise en place du serveur web">Serveur Web</a>
-    </li>
-</ul>
 
-<div class="container">
-    <div class="box">
-        <h2>Installation de Oracle virtual box</h2>
-        <div>
-            <p>L'installation de OracleVirtual Box, qui est un logiciel de virtualisation nous permet par la suite de configurer notre machine virtuelle en choisissant
-            le système d'exploitation de notre machine, pour notre cas le choix s'est porté sur Debian. La suite est de choisir les caractéristiques de la machine (vue dans la partie introduction).</p>
-            <div class="image-section">
-                <div class="image-box">
-                    <img src="assets/images/logo_oracle.jpg" alt="logo de oracle" class="img-fluid">
-                </div>
+<nav aria-label="Navigation principale">
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link" href="index.html" aria-label="Retour à la page d'accueil" data-tooltip="Retour à la page d'accueil">Accueil</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Introduction.html" aria-label="Introduction du sujet" data-tooltip="Introduction du sujet en répondant aux questions sur les VM">Introduction</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="installation.html" aria-label="Processus d'installation" data-tooltip="Explication du processus d'installation de la VM">Installation</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="organisation.html" aria-label="Présentation du planning de la SAE" data-tooltip="Présentation du planning de la SAE">Organisation</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="serveur_web.html" aria-label="Démarches pour le serveur web" data-tooltip="Présentation des démarches pour la mise en place du serveur web">Serveur Web</a>
+        </li>
+    </ul>
+</nav>
+
+<main class="container">
+    <section class="box">
+        <h2>Installation de Oracle VirtualBox</h2>
+        <p>
+            L'installation de Oracle VirtualBox, qui est un logiciel de virtualisation, nous permet par la suite de configurer notre machine virtuelle en choisissant
+            le système d'exploitation de notre machine. Pour notre cas, le choix s'est porté sur Debian. La suite est de choisir les caractéristiques de la machine (vue dans la partie introduction).
+        </p>
+        <div class="image-section">
+            <div class="image-box">
+                <img src="assets/images/logo_oracle.jpg" alt="Logo de Oracle VirtualBox" class="img-fluid">
             </div>
         </div>
-    </div>
-    <div class="box">
-        <h2>Ajout des users et du groupe</h2>
+    </section>
+
+    <section class="box">
+        <h2>Ajout des utilisateurs et des groupes</h2>
         <article>
-            <p>Pour faire cela, il faut se connecter avec l’utilisateur administrateur (« root ») ou un utilisateur
-                ayant des privilèges sudo avec le "su -". La commande "useradd" permet de créer un utilisateur,
-                la commande "groupadd" permet de créer un groupe
-                et pour finir la commande "usermod –g" permet d’ajouter des utilisateurs à un groupe. </p>
-            <section class="image-section">
-                <div class=image-box2>
-                    <img src="assets/images/user-groupe.jpg" alt="sreen d'un terminale montrant les commandes" class="img-fluid">
+            <p>
+                Pour faire cela, il faut se connecter avec l’utilisateur administrateur (« root ») ou un utilisateur
+                ayant des privilèges sudo avec la commande su -. La commande useradd permet de créer un utilisateur,
+                la commande groupadd permet de créer un groupe, et pour finir, la commande usermod –g permet d’ajouter des utilisateurs à un groupe.
+            </p>
+            <div class="image-section">
+                <div class="image-box2">
+                    <img src="assets/images/user-groupe.jpg" alt="Capture d'écran d'un terminal montrant les commandes" class="img-fluid">
                 </div>
-            </section>
+            </div>
         </article>
-    </div>
-    <div class="box">
-        <h2>Verification</h2>
+    </section>
+
+    <section class="box">
+        <h2>Vérification</h2>
         <article>
-            <p>La photo qui suit nous permet de vérifier que tous les users soient crées. </p>
-            <section class="image-section">
-                <div class=image-box2>
-                    <img src="assets/images/verif-user.jpg" alt="sreen d'un terminale montrant les infos des users" class="img-fluid">
+            <p>La photo qui suit nous permet de vérifier que tous les utilisateurs soient créés.</p>
+            <div class="image-section">
+                <div class="image-box2">
+                    <img src="assets/images/verif-user.jpg" alt="Capture d'écran d'un terminal montrant les informations des utilisateurs" class="img-fluid">
                 </div>
-            </section>
+            </div>
         </article>
         <article>
-            <p>La commande "id" suivie d'un nom d'utilisateur permet de voir ses informations, nous pouvons ici l'utiliser pour
-                vérifier si les utilisateurs sont bien crées et ajoutés dans le groupe SAE-Systèmes. </p>
-            <section class="image-section">
-                <div class=image-box2>
-                    <img src="assets/images/verif.jpg" alt="sreen d'un terminale montrant les infos des users" class="img-fluid">
+            <p>
+                La commande id suivie d'un nom d'utilisateur permet de voir ses informations. Nous pouvons ici l'utiliser pour
+                vérifier si les utilisateurs sont bien créés et ajoutés dans le groupe SAE-Systèmes.
+            </p>
+            <div class="image-section">
+                <div class="image-box2">
+                    <img src="assets/images/verif.jpg" alt="Capture d'écran d'un terminal montrant les informations des utilisateurs" class="img-fluid">
                 </div>
-            </section>
+            </div>
         </article>
-    </div>
-    <div class="box">
+    </section>
+
+    <section class="box">
         <h2>Ajout de SSH</h2>
         <article>
-            <p>Nous avons de plus ajouter à notre Machine Virtuelle SSH, ou Secure Shell, qui est un protocole réseau
+            <p>
+                Nous avons également ajouté à notre machine virtuelle SSH, ou Secure Shell, qui est un protocole réseau
                 utilisé pour établir une connexion sécurisée entre deux systèmes, généralement un client et un serveur.
-                Cela nous a permis de pourvoir faire des copiés coller sur notre machine virtuelle car nous entrons les
-                commandes sur le CMD de notre machine physique. </p>
-            <p></p>
-            <section class="image-section">
-                <div class=image-box2>
-                    <img src="assets/images/install_ssh.jpg" alt="screen d'un terminale l'utilisation de ssh" class="img-fluid">
+                Cela nous a permis de pouvoir copier et coller sur notre machine virtuelle en saisissant les commandes sur le terminal de notre machine physique.
+            </p>
+            <div class="image-section">
+                <div class="image-box2">
+                    <img src="assets/images/install_ssh.jpg" alt="Capture d'écran montrant l'utilisation de SSH" class="img-fluid">
                 </div>
-            </section>
+            </div>
         </article>
-    </div>
-</div>
-
+    </section>
+</main>
 
 <footer class="footer">
     <p>Anthony DE OLIVEIRA - Celthans DEZAN - Raphael ORTIGUES © 2024</p>
